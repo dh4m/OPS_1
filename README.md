@@ -5,7 +5,7 @@
 + Abstract
   + 사용자가 성별, 장르, 시간(들을 시간), 출시년도(n년대~) 등을 설정하면 프로그램이 해당 설정에 맞는 playlist를 생성한다
 
-![img](https://cdn.pixabay.com/photo/2021/07/11/16/02/freezelight-6404181_1280.jpg)
+![FullSizeRender-1](https://github.com/dh4m/RandomPlayList/assets/118319100/3f41d9e9-c4a6-4b85-8b18-41125fbde8c0)
 
 + Project Schedule
   
