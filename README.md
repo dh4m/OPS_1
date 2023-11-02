@@ -3,7 +3,7 @@
 ### Random Play List(playlist random generate program)
 
 + Abstract
-  + 사용자가 성별, 장르, 시간(들을 시간), 출시년도(n년대~) 등을 설정하면 프로그램이 playlist를 만들어준다(들을 시간±5분) 중간에 취소나 수정, 새로 추가도 가능
+  + 사용자가 성별, 장르, 시간(들을 시간), 출시년도(n년대~) 등을 설정하면 프로그램이 해당 설정에 맞는 playlist를 생성한다
 
 ![img](https://cdn.pixabay.com/photo/2021/07/11/16/02/freezelight-6404181_1280.jpg)
 
