@@ -6,7 +6,7 @@ make play list(playlist random generate program)
 그에 맞게 프로그램이 playlist를 만들어준다(들을 시간+-5분)
 중간에 취소나 수정, 새로 추가도 가능
 
-![img](https://cdn.pixabay.com/photo/2021/07/11/16/02/freezelight-6404181_1280.jpg)
+![freezelight-6404181_1280](https://github.com/dh4m/RandomPlayList/assets/107628935/171faf6e-b47c-40f4-b880-2e7803497f44)
 
 + role
   + 함동균: css를 이용해서 웹 페이지를 꾸미고 javascript를 이용해서 노래 사이트(유튜브 멜론 등)에서 노래를 가져오고 프로그램을 구성
