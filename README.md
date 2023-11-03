@@ -1,6 +1,6 @@
 # OPS_1
 ## Open source project
-**### Random Play List(playlist random generate program)**
+### Random Play List(playlist random generate program)
 
 + Abstract
   + 사용자가 성별, 장르, 시간(들을 시간), 출시년도(n년대~) 등을 설정하면 프로그램이 해당 설정에 맞는 playlist를 생성한다
