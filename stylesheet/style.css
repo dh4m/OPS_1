@@ -1,0 +1,51 @@
+#head_icon {
+	width: 100px;
+	height: 74px;
+	background-image: url('../resource/random_playlist_img.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#head_title {
+	font-size: 50px;
+	margin-left: 10px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#music-condition-container {
+	width: 30%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.gradient_background {
+	flex-grow: 1;
+	background: radial-gradient(circle, rgba(255, 123, 167, 0.6), rgba(123, 162, 255, 0.6));
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+#realtime-chart {
+	width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	color: white;
+	animation: slideUp 0.5s ease-in-out;
+}
+
+.middle_button {
+	
+}
