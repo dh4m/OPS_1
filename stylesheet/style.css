@@ -14,10 +14,9 @@
 
 #music-condition-container {
 	width: 30%;
-	background-color: rgba(255, 255, 255, 0.3);
 }
 
-#music-list-container {
+.white-transparent-box {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
