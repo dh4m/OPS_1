@@ -37,45 +37,43 @@
         <h3 class="text-center mt-2 mb-5">What do you want?</h3>
         <div id="music-condition" class="mx-auto d-block text-center mb-5">
           <!--condition list radio, button, etc....-->
-          <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-            <div class="btn-group dropend" role="group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                성별
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">남자</a></li>
-                <li><a class="dropdown-item" href="#">여자</a></li>
-              </ul>
+          <div class="form-group">
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect1" aria-label="Floating label select example">
+                <option selected></option>
+                <option value="1">남자</option>
+                <option value="2">여자</option>
+              </select>
+              <label for="floatingSelect1">성별</label>
             </div>
-            <div class="btn-group dropend" role="group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                장르
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">발라드</a></li>
-                <li><a class="dropdown-item" href="#">락</a></li>
-                <li><a class="dropdown-item" href="#">힙합</a></li>
-                <li><a class="dropdown-item" href="#">인디</a></li>
-                <li><a class="dropdown-item" href="#">재즈</a></li>
-                <li><a class="dropdown-item" href="#">락발라드</a></li>
-              </ul>
+
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                <option selected></option>
+                <option value="1">발라드</option>
+                <option value="2">인디</option>
+                <option value="3">K-Pop</option>
+                <option value="3">락</option>
+                <option value="3">락발라드</option>
+
+              </select>
+              <label for="floatingSelect2">장르</label>
             </div>
-            <div class="btn-group dropend" role="group">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                출시년도
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">1980년대</a></li>
-                <li><a class="dropdown-item" href="#">1990년대</a></li>
-                <li><a class="dropdown-item" href="#">2000년대</a></li>
-                <li><a class="dropdown-item" href="#">2010년대</a></li>
-                <li><a class="dropdown-item" href="#">2020년대</a></li>
-                <li><a class="dropdown-item" href="#">최신노래</a></li>
-              </ul>
+
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect2" aria-label="Floating label select example">
+                <option selected></option>
+                <option value="1">1980</option>
+                <option value="2">1990</option>
+                <option value="3">2000</option>
+                <option value="3">2010</option>
+                <option value="3">2020</option>
+                <option value="3">최신곡</option>
+              </select>
+              <label for="floatingSelect2">출시년도</label>
             </div>
+
+            <!-- Add more form-floating elements for additional selects as needed -->
           </div>
         </div>
         <button type="button" id="make-list-button"
