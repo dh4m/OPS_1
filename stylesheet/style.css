@@ -26,6 +26,24 @@ body {
 	min-height: 100vh;
 }
 
+.btn-custom {
+	background-color: radial-gradient(circle, rgba(255, 155, 167, 0.3), rgba(123, 162, 255, 0.3));
+	/* 더 불투명한 흰색 배경색 */
+	color: #000000;
+	/* 텍스트 색상을 원하는 색으로 지정 */
+}
+
+.btn-custom:hover {
+	background-color: radial-gradient(circle, rgba(255, 155, 167, 0.1), rgba(123, 162, 255, 0.1));
+	/* 마우스 호버 시 더 불투명한 효과 */
+}
+
+.label-custom {
+	background-color: radial-gradient(circle, rgba(255, 123, 167, 0.7), rgba(123, 162, 255, 0.7));
+	/* 더 불투명한 버튼의 색상 */
+	color: #000000;
+}
+
 .gradient_background {
 	flex-grow: 1;
 	background: radial-gradient(circle, rgba(255, 123, 167, 0.6), rgba(123, 162, 255, 0.6));
@@ -35,6 +53,7 @@ body {
 	from {
 		transform: translateY(100%);
 	}
+
 	to {
 		transform: translateY(0);
 	}
@@ -50,6 +69,4 @@ body {
 	animation: slideUp 0.5s ease-in-out;
 }
 
-.middle_button {
-	
-}
+.middle_button {}
