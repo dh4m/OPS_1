@@ -30,3 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		i = (i + 1) % chart_list.length;
 	}, 4000);
 });
+
+document.getElementById('make-list-button').addEventListener('click', function() {
+	var oldDiv = document.getElementById('music-condition-container');
+	var newDiv = document.getElementById('music-play-container');
+  
+	// Old div 움직임
+	oldDiv.classList.add('hidden-left');
+  
+	// 애니메이션이 끝난 후 새로운 div 표시
+	oldDiv.addEventListener('transitionend', function() {
+	  oldDiv.style.display = 'none';
+	  newDiv.style.display = 'flex';
+	}, { once: true });
+  });
