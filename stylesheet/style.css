@@ -16,6 +16,12 @@
 
 #music-condition-container {
 	width: 30%;
+	height: 75%;
+}
+
+#music-list-container {
+	width: 30%;
+	height: 75%;
 }
 
 .white-transparent-box {
