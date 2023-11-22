@@ -1,4 +1,6 @@
 #head_icon {
+	display: table-cell;
+	vertical-align: top;
 	width: 100px;
 	height: 74px;
 	background-image: url('../resource/random_playlist_img.jpg');
@@ -68,5 +70,3 @@ body {
 	color: white;
 	animation: slideUp 0.5s ease-in-out;
 }
-
-.middle_button {}
