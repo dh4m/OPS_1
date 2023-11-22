@@ -141,14 +141,16 @@ body {
     animation: move_wave 15s linear infinite;
 }
 
+
 .wrap {
-	width: 500px;
+	width: 40%;
 	height: 500px;
   }
   
   .circle {
 	width: 400px;
 	height: 400px;
+	top: 20%;
 	position: relative;
 	overflow: hidden;
 	border: 7px solid #464343;

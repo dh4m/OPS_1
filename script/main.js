@@ -42,5 +42,5 @@ document.getElementById('make-list-button').addEventListener('click', function()
 	oldDiv.addEventListener('transitionend', function() {
 	  oldDiv.style.display = 'none';
 	  newDiv.style.display = 'flex';
-	}, { once: true });
+	});
   });
