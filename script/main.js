@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	chart_div.textContent = chart_list[0];
 	setInterval(() => {
-		if (count >= 45) { // 3분마다 실시간 차트 받아옴
+		if (count >= 4500) { // 5시간마다 실시간 차트 받아옴
 			count = 0;
 			refresh_list();
 		}
