@@ -1,12 +1,23 @@
+
+const url = "https://www.melon.com/new/index.htm";
+const titles = [];
+
 let chart_list = [];
 
-
 const refresh_list = () => {
-	// 여기 대충 실시간 차트 받아오는 코드 ㅇㅇ 배열 chart_list에 10개 채우면 됨
-	chart_list = [
-		"good music 1", "good music 2", "good music 3", "good music 4", "good music 5", 
-		"good music 6", "good music 7", "good music 8", "good music 9", "good music 10"
-	]; // 임시 코드
+	fetch(url)
+		.then(respone => respone.text())
+		.then((data) =>{
+			const parser = new DOMParser();
+			let root = parser.parseFromString(data, 'text/html');
+
+			chart_list = [];
+			root.querySelectorAll(".rank01").forEach((item) => {
+				chart_list.push(item.querySelector("a").innerText);
+			});
+			chart_list = chart_list.slice(0, 10);
+		})
+		.catch(error => console.error('Error:', error));
 	return ;
 }
 
