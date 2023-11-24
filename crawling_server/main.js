@@ -6,8 +6,8 @@ const port = 3000; // 프록시로 쓸 포트 지정
 
 app.use( // 해당 url에 대해 CORS 허용 설정
 	cors({ origin: [
-		'http://localhost:5500',
-		'http://127.0.0.1:5500',
+		'http://localhost:*',
+		'http://127.0.0.1:*',
 	]})
 );
 
