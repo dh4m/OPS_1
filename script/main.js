@@ -7,6 +7,7 @@ const names = []; // 가수
 let chart_list = ["차트 불러오는 중..."]; // 출력문 저장
 
 async function refresh_list() { // 차트 갱신
+	chart_list = ["차트 불러오는 중..."];
 	fetch(proxy_url) // 구축한 프록시 서버에 get요청 보냄
 		.then(respone => respone.text()) // 응답 텍스트로 변환
 		.then((data) =>{
@@ -19,6 +20,7 @@ async function refresh_list() { // 차트 갱신
 			root.querySelectorAll(".rank02").forEach((item) => { // 노래 가수 저장
 				names.push(item.querySelector("a").innerText);
 			});
+			chart_list = [];
 			titles.forEach((title, i) => {
 				chart_list.push(`${i + 1}. ${title} - ${names[i]}`); // 출력 문자열 생성
 			})
