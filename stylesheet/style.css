@@ -97,6 +97,7 @@ body, ul, li {
 	transition: .5s;
 	/*min-height: var(--side-bar-height);*/   /* 사이드바의 높이를 전체 화면 높이의 90%로 지정 */
 	margin-top: calc((100vh - var(--side-bar-height)) / 2);    /* 사이드바 위와 아래의 마진을 동일하게 지정 */
+	left: 0;
   }
   
   /* 아이콘 시작 */
