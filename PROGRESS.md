@@ -19,7 +19,7 @@ The content of the figure does not necessarily have to be the UI (user interface
 development status.
 
 ## Individual Progress Status
-박찬영: md 파일 제작, wave 제작 및 music list 생성 시 사용할 각종 인터페이스 구성
-함동균: 기초적인 background 제작 및 크롤링 서버 구축
-유현준: sidebar 등 부가적인 인터페이스 구성 및 전체적인 UI upgrade
+- 박찬영: md 파일 제작, wave 제작 및 music list 생성 시 사용할 각종 인터페이스 구성
+- 함동균: 기초적인 background 제작 및 크롤링 서버 구축
+- 유현준: sidebar 등 부가적인 인터페이스 구성 및 전체적인 UI upgrade
 commit link 추가? 하나하나 나열?
