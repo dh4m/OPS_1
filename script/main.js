@@ -62,4 +62,4 @@ document.getElementById('make-list-button').addEventListener('click', function()
 	  oldDiv.style.display = 'none';
 	  newDiv.style.display = 'flex';
 	});
-  });
+});
