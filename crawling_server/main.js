@@ -9,7 +9,8 @@ app.use( // 해당 url에 대해 CORS 허용 설정
 		'http://localhost:5500', // live server port: 5500
 		'http://127.0.0.1:5500',
 		'http://localhost:*',
-		'http://127.0.0.1:*'
+		'http://127.0.0.1:*',
+		'null'
 	]})
 );
 
