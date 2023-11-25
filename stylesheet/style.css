@@ -470,13 +470,23 @@ body, ul, li {
 	}
   }
 
+  @keyframes fade_out {
+	0% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	  }
+  }
 
   .content {
-	transition: transform 2s ease-in-out; /* 2초 동안 애니메이션 진행 */
+	
   }
   
   .hidden-left {
-	transform: translateX(-100%);
+	animation: fade_out 1s ease-in-out;
   }
 
   

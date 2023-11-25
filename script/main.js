@@ -60,7 +60,7 @@ document.getElementById('make-list-button').addEventListener('click', function()
 	oldDiv.classList.add('hidden-left');
   
 	// 애니메이션이 끝난 후 새로운 div 표시
-	oldDiv.addEventListener('transitionend', function() {
+	oldDiv.addEventListener('animationend', function() {
 	  oldDiv.style.display = 'none';
 	  newDiv.style.display = 'flex';
 	});
