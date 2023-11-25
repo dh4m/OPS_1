@@ -25,7 +25,7 @@ app.listen(port, () => { // port로 오는 요청을 인가함
 });
 
 async function crawling_melon() {
-	const url = "https://www.melon.com/new/index.htm"; // 멜론 URL
+	const url = "https://www.melon.com/chart/index.htm"; // 멜론 URL
 
 	let data = await fetch(url) // url로 요청을 보냄
 		.then(respone => respone.text()) // 문자열로 변환

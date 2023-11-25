@@ -206,39 +206,14 @@ body {
 	top: -100%;
 	left: -30%;
 	border-radius: 46%;
-	background: linear-gradient(rgba(252,251,232,0.1) 10%,                  transparent);
+	background: linear-gradient(rgba(252,251,232,0.1) 10%, transparent);
 	animation: move 7s infinite linear;
   }
   
   @keyframes move {
 	100% {
 	  transform: rotate(360deg);
-	}
-  }
-  
-  
-  /* moon css & animation */
-  .fa-moon {
-	position: absolute;
-	top: 19%;
-	left: 33%;
-	font-size: 130px;
-	color: rgba(255,255,255,0.8);
-	animation: moon-rotation 4s infinite linear;
-  }
-  
-  .blur {
-	filter: blur(10px);
-	-webkit-filter: blur(10px);
-  }
-  
-  @keyframes moon-rotation {
-	0%, 100% {
-	  transform: rotate(0deg);
-	 }
-	50% {
-	  transform: rotate(-20deg);
-	}
+		}
   }
 
   /* star css & animation */
