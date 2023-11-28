@@ -9,6 +9,8 @@
 6. 실시간 멜론 차트를 추가하고, 크롤링을 통해(서버 구축) 실제 멜론 차트를 가져옴
 
 ### Project Schedule
+<img width="960" alt="image" src="https://github.com/dh4m/RandomPlayList/assets/71581953/bba3962d-dc9c-437f-997c-b6fba9e79d20">
+
 Provide a simple figure that depicts the project schedule and the 
 current status of progress.
 
