@@ -15,10 +15,15 @@ Provide a simple figure that depicts the project schedule and the
 current status of progress.
 
 ### Project Screenshot
-Attach a brief screenshot of the project that is currently in 
-development.
-The content of the figure does not necessarily have to be the UI (user interface)
-development status.
+대기화면
+![image](https://github.com/dh4m/RandomPlayList/assets/118319100/c6fbef8b-a701-40e6-a2a4-a2290b0c2b60)
+
+sidebar 확인
+![image](https://github.com/dh4m/RandomPlayList/assets/118319100/76fecfef-3aa3-4b4a-8c5d-eecd21743e14)
+
+playlist make 후 화면
+![image](https://github.com/dh4m/RandomPlayList/assets/118319100/800f2926-fc20-4832-8b70-032bfe00963a)
+
 
 ## Individual Progress Status
 - 박찬영: md 파일 제작, wave 제작 및 music list 생성 시 사용할 각종 인터페이스 구성
