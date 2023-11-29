@@ -32,4 +32,10 @@ playlist make 후 화면
 	* user interaction 및 애니메이션 효과 구축 ([commit link](https://github.com/dh4m/RandomPlayList/commit/3494ae4156193856a230328f20dad7082cbf9518))
 	* 멜론 크롤링 서버 구축 및 관리 ([commit link 1](https://github.com/dh4m/RandomPlayList/commit/7d6bff9ca787c5c959599fae0ab391795a682cc2)) ([commit link 2](https://github.com/dh4m/RandomPlayList/commit/bde2208da2d58de17ccd5b2a3c761c3b9623ea6a))
 - 유현준: sidebar 등 부가적인 인터페이스 구성 및 전체적인 UI upgrade
+  	*UI 업데이트(색상 변경, UI크기 조절 등)
+  https://github.com/dh4m/RandomPlayList/commit/c3795d4180c9af24a6b47d9f88e5813e8b57fe55
+  	*노래 재생시 나오는 UI에 별 추가
+  https://github.com/dh4m/RandomPlayList/commit/eb9b145ad246d6425b56765063d01b3c38f699c3
+  	*side bar 추가
+  https://github.com/dh4m/RandomPlayList/commit/30d199edc4b2a4f82e0a4c4eb831b8d4f9663936
 - commit link 추가? 하나하나 나열?
