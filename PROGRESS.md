@@ -27,6 +27,9 @@ playlist make 후 화면
 
 ## Individual Progress Status
 - 박찬영: md 파일 제작, wave 제작 및 music list 생성 시 사용할 각종 인터페이스 구성
-- 함동균: 기초적인 background 제작 및 크롤링 서버 구축, 애니메이션을 사용한 user interaction 구축 
+- 함동균: 기초적인 background 제작 및 크롤링 서버 구축, 애니메이션을 사용한 user interaction 구축
+	* 초기 UI프레임 및 background 제작 ([commit link 1 - html](https://github.com/dh4m/RandomPlayList/commit/f30ae1f0e582758e3584fc77984aa0a22f06781a)) ([commit link 2 - css](https://github.com/dh4m/RandomPlayList/commit/b2ebea1bb76ed4c20893ecaa466248671b307d4a)) ([commit link 1 - JS](https://github.com/dh4m/RandomPlayList/commit/5dc0b567d37d78e6806fe2d2769268ed55dc49cf))
+	* user interaction 및 애니메이션 효과 구축 ([commit link](https://github.com/dh4m/RandomPlayList/commit/3494ae4156193856a230328f20dad7082cbf9518))
+	* 멜론 크롤링 서버 구축 및 관리 ([commit link 1](https://github.com/dh4m/RandomPlayList/commit/7d6bff9ca787c5c959599fae0ab391795a682cc2)) ([commit link 2](https://github.com/dh4m/RandomPlayList/commit/bde2208da2d58de17ccd5b2a3c761c3b9623ea6a))
 - 유현준: sidebar 등 부가적인 인터페이스 구성 및 전체적인 UI upgrade
 - commit link 추가? 하나하나 나열?
