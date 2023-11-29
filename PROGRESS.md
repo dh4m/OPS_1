@@ -26,10 +26,9 @@ playlist make 후 화면
 
 
 ## Individual Progress Status
-- 박찬영: * md 파일 제작: ([commit 1] (https://github.com/dh4m/RandomPlayList/commit/d9b7c7fa15cb3c561ae97add6db25f12332c5014))
-	*  wave 제작 : ([commit 2] (https://github.com/dh4m/RandomPlayList/commit/3494ae4156193856a230328f20dad7082cbf9518))
- 	*  music list 생성 시 사용할 각종 인터페이스 구성:([commit 3] (https://github.com/dh4m/RandomPlayList/commit/e9bf7d085a79d32fbfcbd05cd1051a8ca3615c4e)) ([commit 4] (https://github.com/dh4m/RandomPlayList/commit/27ac5145296d08d4c4215047179dc66e4b2da7cb))
-  	  ([commit 5] (https://github.com/dh4m/RandomPlayList/commit/c86caef90c6c6da9eb5e978f779240d40cbe3832 ))
+- 박찬영: * md 파일 제작 ([commit 1](https://github.com/dh4m/RandomPlayList/commit/d9b7c7fa15cb3c561ae97add6db25f12332c5014))
+	*  wave 제작 ([commit 2](https://github.com/dh4m/RandomPlayList/commit/3494ae4156193856a230328f20dad7082cbf9518))
+ 	*  music list 생성 시 사용할 각종 인터페이스 구성 ([commit 3](https://github.com/dh4m/RandomPlayList/commit/e9bf7d085a79d32fbfcbd05cd1051a8ca3615c4e)) ([commit 4](https://github.com/dh4m/RandomPlayList/commit/27ac5145296d08d4c4215047179dc66e4b2da7cb)) ([commit 5](https://github.com/dh4m/RandomPlayList/commit/c86caef90c6c6da9eb5e978f779240d40cbe3832 ))
 
 - 함동균: 기초적인 background 제작 및 크롤링 서버 구축, 애니메이션을 사용한 user interaction 구축
 	* 초기 UI프레임 및 background 제작 ([commit link 1 - html](https://github.com/dh4m/RandomPlayList/commit/f30ae1f0e582758e3584fc77984aa0a22f06781a)) ([commit link 2 - css](https://github.com/dh4m/RandomPlayList/commit/b2ebea1bb76ed4c20893ecaa466248671b307d4a)) ([commit link 1 - JS](https://github.com/dh4m/RandomPlayList/commit/5dc0b567d37d78e6806fe2d2769268ed55dc49cf))
