@@ -19,18 +19,20 @@
 
 
 <body>
-  <nav class="navbar bg-body-tertiary pt-0" style="height: 80px; background-color: #ffffff;">
+  <nav class="navbar bg-body-tertiary pt-0" style="height: 80px; background-color: #44a244;">
     <div class="container pt-0 mt-0">
       <a class="navbar-brand" href="#">
         <div id="head_icon" class="d-inline-block align-items-center mt-0"></div>
         <span id="head_title" class="d-inline-block align-text-bottom">Random Play List</span>
       </a>
-      <div class="d-flex bg-success rounded-2 overflow-y-hidden">
-        <span class="h5 mx-2 my-1 align-middle" style="color: white;">실시간 멜론 차트 | </span>
+      <div id="chart" class="d-flex rounded-2 overflow-y-hidden">
+        <span class="h5 mx-2 my-1 align-middle" style="color: #44a244;">실시간 멜론 차트 | </span>
         <div id="realtime-chart" class="h5 text-end mx-2 my-1 align-middle"></div>
       </div>
     </div>
   </nav>
+
+
 
   <div class="gradient_background d-flex">
     <div class="d-flex container col-9">
@@ -44,16 +46,16 @@
         </section>
         <ul>
           <li>
-            <a href="#"><i class="fa-solid fa-cat"></i> menu1</a>
+            <a href="#"><i class="fa-solid fa-cat"></i> Reset</a>
           </li>
           <li>
-            <a href="#">menu2</a>
+            <a href="#">MyPlayList</a>
           </li>
           <li>
-            <a href="#">menu3</a>
+            <a href="#">Melon top 100</a>
           </li>
           <li>
-            <a href="#">menu4</a>
+            <a href="#">Issue</a>
           </li>
         </ul>
       </aside>
@@ -70,7 +72,7 @@
                 <option value="male">남자</option>
                 <option value="female">여자</option>
               </select>
-             
+
             </div>
 
             <div class="form-floating mb-3">
@@ -83,7 +85,7 @@
                 <option value="rock-ballade">락발라드</option>
 
               </select>
-              
+
             </div>
 
             <div class="form-floating mb-3">
@@ -96,18 +98,17 @@
                 <option value="20">2020</option>
                 <option value="new">최신곡</option>
               </select>
-              
+
             </div>
           </div>
         </div>
-        <button type="button" id="make-list-button"
-          class="btn btn-primary btn-lg middle_button mx-auto d-block">MAKE!</button>
+        <button type="button" id="make-list-button" class="btn btn-lg middle_button mx-auto d-block">Make</button>
       </div>
 
       <!--music play part-->
-      <div class="wrap content me-5 my-3" id="music-play-container" style="display: none;">
+      <div class=" wrap content me-5 my-3" id="music-play-container" style="display: none;">
         <div class="circle">
-					
+
           <!-- wave -->
           <div class="wave-one"></div>
           <div class="wave-two"></div>
