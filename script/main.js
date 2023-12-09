@@ -10,7 +10,7 @@ async function refresh_list() { // 차트 갱신
 	chart_list = ["차트 불러오는 중..."];
 	fetch(proxy_url) // 구축한 프록시 서버에 get요청 보냄
 		.then(respone => respone.text()) // 응답 텍스트로 변환
-		.then((data) =>{
+		.then((data) => {
 			const parser = new DOMParser(); // html 파싱 객체 생성
 			let root = parser.parseFromString(data, 'text/html'); // 파싱
 
@@ -27,7 +27,7 @@ async function refresh_list() { // 차트 갱신
 			chart_list = chart_list.slice(0, 15); // 15위까지만 표시
 		})
 		.catch(error => console.error('Error:', error)); // http 요청 에러
-	return ;
+	return;
 }
 
 document.addEventListener('DOMContentLoaded', () => { // 사이트 로드 시
@@ -46,22 +46,25 @@ document.addEventListener('DOMContentLoaded', () => { // 사이트 로드 시
 		else count++;
 		chart_div.textContent = chart_list[i]; // i번째 문자열 출력
 		chart_div.style.animation = 'none'; // 애니메이션 리셋
-    	chart_div.offsetHeight; // 리플로우 발생
-    	chart_div.style.animation = 'slideUp 0.5s ease-in-out'; // 애니메이션 재적용
+		chart_div.offsetHeight; // 리플로우 발생
+		chart_div.style.animation = 'slideUp 0.5s ease-in-out'; // 애니메이션 재적용
 		i = (i + 1) % chart_list.length; // 인덱스 갱신
 	}, 4000);
 });
 
-document.getElementById('make-list-button').addEventListener('click', function() {
+document.getElementById('make-list-button').addEventListener('click', function () {
 	var oldDiv = document.getElementById('music-condition-container');
+	var oldDiv2 = document.getElementById("music-list-container");
 	var newDiv = document.getElementById('music-play-container');
-  
+
 	// Old div 움직임
 	oldDiv.classList.add('hidden-left');
-  
+	oldDiv2.classList.add('hidden-width');
+	newDiv.classList.add('show-right');
+
 	// 애니메이션이 끝난 후 새로운 div 표시
-	oldDiv.addEventListener('animationend', function() {
-	  oldDiv.style.display = 'none';
-	  newDiv.style.display = 'flex';
+	oldDiv.addEventListener('animationend', function () {
+		newDiv.style.display = 'flex';
+		oldDiv.style.display = 'none';
 	});
 });

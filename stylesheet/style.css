@@ -1,3 +1,13 @@
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 #head_icon {
 	display: table-cell;
 	vertical-align: top;
@@ -275,10 +285,6 @@ a {
 		transform: translateX(0) translateZ(0) scaleY(1)
 	}
 
-
-
-
-
 	50% {
 		transform: translateX(-25%) translateZ(0) scaleY(0.55)
 	}
@@ -365,20 +371,21 @@ a {
 }
 
 .circle {
-	width: 400px;
-	height: 400px;
+	width: 600px;
+	height: 600px;
 	top: 20%;
 	position: relative;
 	overflow: hidden;
 	border: 7px solid #464343;
 	border-radius: 100%;
 	background: linear-gradient(#3c5aff, #52f2fd);
-	transform: translate3d(0, 0, 0);
+	transform: translate3d(6.5%, 0, 0);
+	/* 오른쪽으로 20% 이동 */
 }
 
 .wave-one {
-	width: 600px;
-	height: 600px;
+	width: 900px;
+	height: 980px;
 	position: absolute;
 	top: -65%;
 	left: -30%;
@@ -388,8 +395,8 @@ a {
 }
 
 .wave-two {
-	width: 650px;
-	height: 650px;
+	width: 950px;
+	height: 980px;
 	position: absolute;
 	top: -90%;
 	left: -30%;
@@ -399,8 +406,8 @@ a {
 }
 
 .wave-three {
-	width: 650px;
-	height: 650px;
+	width: 950px;
+	height: 1000px;
 	position: absolute;
 	top: -100%;
 	left: -30%;
@@ -411,8 +418,8 @@ a {
 }
 
 .wave-four {
-	width: 650px;
-	height: 650px;
+	width: 950px;
+	height: 1000px;
 	position: absolute;
 	top: -100%;
 	left: -30%;
@@ -434,32 +441,32 @@ a {
 }
 
 .star1 {
-	top: 70px;
+	top: 120px;
 	left: 90px;
 	animation: star-one 1.2s infinite;
 }
 
 .star2 {
-	top: 50px;
+	top: 100px;
 	right: 110px;
 	animation: star-two 1.7s infinite;
 }
 
 .star3 {
-	top: 180px;
+	top: 230px;
 	left: 45px;
 	animation: star-three 1.5s infinite;
 }
 
 .star4 {
-	top: 120px;
+	top: 170px;
 	right: 40px;
 	font-size: 5px;
 	animation: star-five 1.9s infinite;
 }
 
 .star5 {
-	top: 200px;
+	top: 250px;
 	right: 90px;
 	font-size: 5px;
 	animation: star-five 2s infinite;
@@ -554,7 +561,20 @@ a {
 	animation: fade_out 1s ease-in-out;
 }
 
+#music-list-container.hidden-width {
+	transition: 1s;
+	transform: scaleX(0.7);
+}
 
+#music-play-container.show-right {
+	width: 50%;
+	height: 50%;
+
+	animation: fadein 2s;
+
+	transition: width 2s ease-in-out,
+		opacity 2s ease-in-out;
+}
 
 .background-wave {
 	position: fixed;
