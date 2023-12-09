@@ -441,32 +441,32 @@ a {
 }
 
 .star1 {
-	top: 70px;
+	top: 120px;
 	left: 90px;
 	animation: star-one 1.2s infinite;
 }
 
 .star2 {
-	top: 50px;
+	top: 100px;
 	right: 110px;
 	animation: star-two 1.7s infinite;
 }
 
 .star3 {
-	top: 180px;
+	top: 230px;
 	left: 45px;
 	animation: star-three 1.5s infinite;
 }
 
 .star4 {
-	top: 120px;
+	top: 170px;
 	right: 40px;
 	font-size: 5px;
 	animation: star-five 1.9s infinite;
 }
 
 .star5 {
-	top: 200px;
+	top: 250px;
 	right: 90px;
 	font-size: 5px;
 	animation: star-five 2s infinite;
