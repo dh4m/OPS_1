@@ -24,6 +24,26 @@
 	height: 75%;
 }
 
+#chart {
+	border: 2px solid #44a244;
+	/* 테두리 짙은 연두색 */
+	background-color: white;
+	/* 배경색 흰색 */
+	padding: 8px;
+	/* 테두리 내부 여백 설정 */
+}
+
+#realtime-chart {
+	width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	color: #44a244;
+	font-size: 18px;
+	animation: slideUp 0.5s ease-in-out;
+}
+
 .white-transparent-box {
 	background-color: rgba(255, 255, 255, 0.3);
 }
@@ -56,119 +76,130 @@ body {
 	flex-grow: 1;
 	background: radial-gradient(circle, rgba(255, 123, 167, 0.6), rgba(123, 162, 255, 0.6));
 }
+
 /* 노멀라이즈 시작 */
-body, ul, li {
+body,
+ul,
+li {
 	margin: 0;
 	padding: 0;
-	list-style: none;   /* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
-  }
-  
-  a {
-	color: inherit;   /* 부모 엘리먼트의 값을 물려받는다 */
-	text-decoration: none;    /* 해당 태그의 text-decoration 속성을 none 값으로 하는 것으로 밑줄을 제거한다 */
-  }
-  /* 노멀라이즈 끝 */
-  
-  /* 커스텀 시작 */
-  .side-bar > ul ul {
+	list-style: none;
+	/* 해당 태그의 list-style을 none으로 하는 것으로 ●을 제거한다 */
+}
+
+a {
+	color: inherit;
+	/* 부모 엘리먼트의 값을 물려받는다 */
+	text-decoration: none;
+	/* 해당 태그의 text-decoration 속성을 none 값으로 하는 것으로 밑줄을 제거한다 */
+}
+
+/* 노멀라이즈 끝 */
+
+/* 커스텀 시작 */
+.side-bar>ul ul {
 	display: none;
-  }
-  
-  /* 사이드바 시작 */
-  
-  /* 사이드바의 너비와 높이를 변수를 통해 통제 */
-  :root {
+}
+
+/* 사이드바 시작 */
+
+/* 사이드바의 너비와 높이를 변수를 통해 통제 */
+:root {
 	--side-bar-width: 270px;
 	--side-bar-height: 70vh;
-  }
-  
-  .side-bar {
-	position: fixed;    /* 스크롤을 따라오도록 지정 */
+}
+
+.side-bar {
+	position: fixed;
+	/* 스크롤을 따라오도록 지정 */
 	background-color: black;
 	width: var(--side-bar-width);
 	border-radius: 20px;
 	transform: translate(calc(var(--side-bar-width) * -0.95), 0);
 	transition: .5s;
-	/*min-height: var(--side-bar-height);*/   /* 사이드바의 높이를 전체 화면 높이의 90%로 지정 */
-	margin-top: calc((100vh - var(--side-bar-height)) / 2);    /* 사이드바 위와 아래의 마진을 동일하게 지정 */
+	/*min-height: var(--side-bar-height);*/
+	/* 사이드바의 높이를 전체 화면 높이의 90%로 지정 */
+	margin-top: calc((100vh - var(--side-bar-height)) / 2);
+	/* 사이드바 위와 아래의 마진을 동일하게 지정 */
 	left: 0;
-  }
-  
-  /* 아이콘 시작 */
-  .side-bar__icon-box {
+}
+
+/* 아이콘 시작 */
+.side-bar__icon-box {
 	display: flex;
 	justify-content: flex-end;
-  }
-  
-  .side-bar__icon-1 {
+}
+
+.side-bar__icon-1 {
 	position: relative;
 	width: 23px;
 	height: 17px;
 	margin: 15px;
 	margin-top: 20px;
 	transition: .5s;
-  }
-  
-  :root {
+}
+
+:root {
 	--side-bar__icon: .5s;
-  }
-  
-  .side-bar__icon-1 > div {
+}
+
+.side-bar__icon-1>div {
 	position: absolute;
 	width: 100%;
 	height: 20%;
 	background-color: white;
 	transition: all var(--side-bar__icon);
-  }
-  
-  .side-bar__icon-1 > div:nth-of-type(1) {
+}
+
+.side-bar__icon-1>div:nth-of-type(1) {
 	top: 0;
 	width: auto;
 	left: 0;
 	right: 0;
 	transition: all var(--side-bar__icon), left calc(var(--side-bar__icon) / 2) calc(var(--side-bar__icon) / 2), right calc(var(--side-bar__icon) / 2) calc(var(--side-bar__icon) / 2), height calc(var(--side-bar__icon) / 2) 0s;
-  }
-  
-  .side-bar__icon-1 > div:nth-of-type(2) {
+}
+
+.side-bar__icon-1>div:nth-of-type(2) {
 	top: 40%;
-	transform-origin:bottom left;
-  }
-  
-  .side-bar__icon-1 > div:nth-of-type(3) {
+	transform-origin: bottom left;
+}
+
+.side-bar__icon-1>div:nth-of-type(3) {
 	top: 80%;
 	left: auto;
 	right: 0;
-	transform-origin:bottom right;
-  }
-  
-  
-  .side-bar:hover .side-bar__icon-1 {
+	transform-origin: bottom right;
+}
+
+
+.side-bar:hover .side-bar__icon-1 {
 	transform: translate(-198px, 0);
-  }
-  
-  .side-bar:hover .side-bar__icon-1 > div:nth-of-type(2) {
-	transform:rotate(45deg);
+}
+
+.side-bar:hover .side-bar__icon-1>div:nth-of-type(2) {
+	transform: rotate(45deg);
 	width: 70.5%;
 	height: 25%;
-  }
-  
-  .side-bar:hover .side-bar__icon-1 > div:nth-of-type(3) {
+}
+
+.side-bar:hover .side-bar__icon-1>div:nth-of-type(3) {
 	top: 40%;
-	transform:rotate(-45deg);
+	transform: rotate(-45deg);
 	width: 70.5%;
 	height: 25%;
-  }
-  
-  .side-bar:hover .side-bar__icon-1 > div:nth-of-type(1) {
+}
+
+.side-bar:hover .side-bar__icon-1>div:nth-of-type(1) {
 	left: 41%;
 	right: 41%;
 	height: 100%;
 	transition: all var(--side-bar__icon), left calc(var(--side-bar__icon) / 2) 0s, right calc(var(--side-bar__icon) / 2) 0s, height calc(var(--side-bar__icon) / 2) calc(var(--side-bar__icon) / 2);
-  }
-  /* 아이콘 끝 */
-  
-  /* 모든 메뉴의 a에 속성값 부여 */
-  .side-bar ul > li > a {
+}
+
+/* 아이콘 끝 */
+
+/* 모든 메뉴의 a에 속성값 부여 */
+.side-bar ul>li>a {
 	display: block;
 	color: white;
 	font-size: 1.4rem;
@@ -177,40 +208,45 @@ body, ul, li {
 	padding-bottom: 20px;
 	padding-left: 50px;
 	transition: .5s;
-  }
-  
-  /* 자식의 position이 absolute일 때 자식을 영역 안에 가두어 준다 */
-  .side-bar > ul > li {
+}
+
+/* 자식의 position이 absolute일 때 자식을 영역 안에 가두어 준다 */
+.side-bar>ul>li {
 	position: relative;
-  }
-  
-  /* 모든 메뉴가 마우스 인식 시 반응 */
-  .side-bar ul > li:hover > a {
+}
+
+/* 모든 메뉴가 마우스 인식 시 반응 */
+.side-bar ul>li:hover>a {
 	background-color: #555;
 	border-bottom: 1px solid #999;
-  }
-  
-  /* 1차 메뉴의 항목이 마우스 인식 시에 2차 메뉴 등장 */
-  .side-bar > ul > li:hover > ul {
+}
+
+/* 1차 메뉴의 항목이 마우스 인식 시에 2차 메뉴 등장 */
+.side-bar>ul>li:hover>ul {
 	display: block;
 	position: absolute;
 	background-color: #888;
-	top: 0;         /* 2차 메뉴의 상단을 1차 메뉴의 상단에 고정 */
-	left: 100%;     /* 2차 메뉴를 1차 메뉴의 너비만큼 이동 */
-	width: 100%;    /* 1차 메뉴의 너비를 상속 */
-  }
-  
-  /* 사이드바 너비의 80%만큼 왼쪽으로 이동 */
-  .side-bar {
+	top: 0;
+	/* 2차 메뉴의 상단을 1차 메뉴의 상단에 고정 */
+	left: 100%;
+	/* 2차 메뉴를 1차 메뉴의 너비만큼 이동 */
+	width: 100%;
+	/* 1차 메뉴의 너비를 상속 */
+}
+
+/* 사이드바 너비의 80%만큼 왼쪽으로 이동 */
+.side-bar {
 	border-radius: 20px;
 	transform: translate(calc(var(--side-bar-width) * -0.8), 0);
 	transition: .5s;
-  }
-  
-  /* 마우스 인식 시 원래의 위치로 이동 */
-  .side-bar:hover {
-	transform: translate(-20px, 0);   /* 둥근 모서리의 너비만큼 숨겨주기 */
-  }
+}
+
+/* 마우스 인식 시 원래의 위치로 이동 */
+.side-bar:hover {
+	transform: translate(-20px, 0);
+	/* 둥근 모서리의 너비만큼 숨겨주기 */
+}
+
 @keyframes slideUp {
 	from {
 		transform: translateY(100%);
@@ -221,93 +257,110 @@ body, ul, li {
 	}
 }
 
-#realtime-chart {
-	width: 300px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-align: left;
-	color: white;
-	animation: slideUp 0.5s ease-in-out;
+
+#make-list-button {
+	background-color: rgba(255, 255, 255, 0.3);
+	/* 더 불투명한 버튼의 색상 */
+	color: #000000;
 }
 
+#make-list-button:hover {
+	background: radial-gradient(circle, rgba(255, 155, 167, 0.6), rgba(255, 155, 167, 0.6));
+}
+
+
+
 @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
+	0% {
+		transform: translateX(0) translateZ(0) scaleY(1)
+	}
+
+	50% {
+		transform: translateX(-25%) translateZ(0) scaleY(0.55)
+	}
+
+	100% {
+		transform: translateX(-50%) translateZ(0) scaleY(1)
+	}
 }
+
 .waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
 }
+
 .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	bottom: -1px;
+	background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
 }
+
 .bgTop {
-    z-index: 15;
-    opacity: 0.5;
+	z-index: 15;
+	opacity: 0.5;
 }
+
 .bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
+	z-index: 10;
+	opacity: 0.75;
 }
+
 .bgBottom {
-    z-index: 5;
+	z-index: 5;
 }
+
 .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
+	position: absolute;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	background-repeat: repeat no-repeat;
+	background-position: 0 bottom;
+	transform-origin: center bottom;
 }
+
 .waveTop {
-    background-size: 50% 100px;
+	background-size: 50% 100px;
 }
+
 .waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+	animation: move-wave 3s;
+	-webkit-animation: move-wave 3s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
 }
+
 .waveMiddle {
-    background-size: 50% 120px;
+	background-size: 50% 120px;
 }
+
 .waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
+	animation: move_wave 10s linear infinite;
 }
+
 .waveBottom {
-    background-size: 50% 100px;
+	background-size: 50% 100px;
 }
+
 .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
+	animation: move_wave 15s linear infinite;
 }
 
 
 .wrap {
 	width: 40%;
 	height: 500px;
-  }
-  
-  .circle {
+}
+
+.circle {
 	width: 400px;
 	height: 400px;
 	top: 20%;
@@ -317,31 +370,31 @@ body, ul, li {
 	border-radius: 100%;
 	background: linear-gradient(#3c5aff, #52f2fd);
 	transform: translate3d(0, 0, 0);
-  }
-  
-  .wave-one {
+}
+
+.wave-one {
 	width: 600px;
 	height: 600px;
 	position: absolute;
 	top: -65%;
 	left: -30%;
 	border-radius: 45%;
-	background: rgba(3,169,244,0.8);
+	background: rgba(3, 169, 244, 0.8);
 	animation: move 3s infinite linear;
-  }
-  
-  .wave-two {
+}
+
+.wave-two {
 	width: 650px;
 	height: 650px;
 	position: absolute;
 	top: -90%;
 	left: -30%;
 	border-radius: 45%;
-	background: rgba(34,79,242,0.8);
+	background: rgba(34, 79, 242, 0.8);
 	animation: move 5s infinite linear;
-  }
-  
-  .wave-three {
+}
+
+.wave-three {
 	width: 650px;
 	height: 650px;
 	position: absolute;
@@ -349,149 +402,165 @@ body, ul, li {
 	left: -30%;
 	border-radius: 45%;
 	background: #1d074b;
-	border: 6px solid rgba(131,119,152,0.7);
+	border: 6px solid rgba(131, 119, 152, 0.7);
 	animation: move 7s infinite linear;
-  }
-  
-  .wave-four {
+}
+
+.wave-four {
 	width: 650px;
 	height: 650px;
 	position: absolute;
 	top: -100%;
 	left: -30%;
 	border-radius: 46%;
-	background: linear-gradient(rgba(252,251,232,0.1) 10%, transparent);
+	background: linear-gradient(rgba(252, 251, 232, 0.1) 10%, transparent);
 	animation: move 7s infinite linear;
-  }
-  
-  @keyframes move {
-	100% {
-	  transform: rotate(360deg);
-		}
-  }
+}
 
-  /* star css & animation */
-  .fa-asterisk {
+@keyframes move {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* star css & animation */
+.fa-asterisk {
 	position: absolute;
 	font-size: 13px;
-  }
-  
-  .star1 {
+}
+
+.star1 {
 	top: 70px;
 	left: 90px;
 	animation: star-one 1.2s infinite;
-  }
-		
-  .star2 {
+}
+
+.star2 {
 	top: 50px;
 	right: 110px;
 	animation: star-two 1.7s infinite;
-  }
-		
-  .star3 {
+}
+
+.star3 {
 	top: 180px;
 	left: 45px;
 	animation: star-three 1.5s infinite;
-  }
-		
-  .star4 {
+}
+
+.star4 {
 	top: 120px;
 	right: 40px;
 	font-size: 5px;
 	animation: star-five 1.9s infinite;
-  }
-  
-  .star5 {
+}
+
+.star5 {
 	top: 200px;
 	right: 90px;
 	font-size: 5px;
 	animation: star-five 2s infinite;
-  }
-  
-  
-  @keyframes star-one {
-	0%, 100% {
-	  transform: scale(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
-	  
-  @keyframes star-two {
-	0%, 100% {
-	  transform: scale(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
-	  
-  @keyframes star-three {
-	0%, 100% {
-	  transform: scale(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
-	  
-  @keyframes star-four {
-	0%, 100% {
-	  transform: scale(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
-  
-  @keyframes star-five {
-	0%, 100% {
-	  transform: scale(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: scale(1);
-	  opacity: 1;
-	}
-  }
+}
 
-  @keyframes fade_out {
-	0% {
-	  transform: scale(1);
-	  opacity: 1;
+
+@keyframes star-one {
+
+	0%,
+	100% {
+		transform: scale(0);
+		opacity: 0;
 	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes star-two {
+
+	0%,
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes star-three {
+
+	0%,
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes star-four {
+
+	0%,
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes star-five {
+
+	0%,
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes fade_out {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
 	100% {
 		transform: translateX(-100%);
 		opacity: 0;
-	  }
-  }
+	}
+}
 
-  .content {
-	
-  }
-  
-  .hidden-left {
+.content {}
+
+.hidden-left {
 	animation: fade_out 1s ease-in-out;
-  }
+}
 
-  
+
 
 .background-wave {
-	position: fixed; /* 또는 position: absolute; */
-    top: -150px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* 다른 요소들이 위에 오도록 설정 */
+	position: fixed;
+	/* 또는 position: absolute; */
+	top: -150px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/* 다른 요소들이 위에 오도록 설정 */
 }
