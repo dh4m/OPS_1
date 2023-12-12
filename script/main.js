@@ -82,13 +82,16 @@ document.querySelectorAll('.play-pause-button').forEach(button => {
 					this.classList.add('playing');
 					audio.play();
 			}
+		}
+		if (!button.classList.contains('paused')) {
+			button.classList.add('paused');
+		}
 	});
 });
 
 var timer;
 var percent = 0;
 var audio = document.getElementById("audio");
-
 audio.addEventListener("playing", function(_event) {
 	var duration = _event.target.duration;
 	advance(duration, audio);
