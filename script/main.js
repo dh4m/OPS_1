@@ -82,11 +82,11 @@ document.querySelectorAll('.play-pause-button').forEach(button => {
 					this.classList.add('playing');
 					audio.play();
 			}
-		}
-		if (!button.classList.contains('paused')) {
+	}); // 여기에 괄호를 추가함
+
+	if (!button.classList.contains('paused')) {
 			button.classList.add('paused');
-		}
-	});
+	}
 });
 
 var timer;
