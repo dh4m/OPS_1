@@ -66,45 +66,17 @@
 
         <div id="music-condition" class="mx-auto d-block text-center mb-5">
           <!--condition list radio, button, etc....-->
-          <div class="form-group">
-            <div class="form-floating mb-3">
-              <select class="form-select btn btn-custom" id="gender-select" aria-label="Floating label select example">
-                <option value="no-trophy-gender" selected>성별 무관</option>
-                <option value="male">남자</option>
-                <option value="female">여자</option>
-              </select>
-
-            </div>
-
-            <div class="form-floating mb-3">
-              <select class="form-select btn btn-custom" id="genre-select" aria-label="Floating label select example">
-                <option value="don't care genre" selected>장르 무관</option>
-                <option value="ballade">발라드</option>
-                <option value="dance">댄스</option>
-                <option value="rap/hip-hop">랩/힙합</option>
-                <option value="r&b/soul">R&B/Soul</option>
-                <option value="indie">인디음악</option>
-								<option value="rock/metal">록/메탈</option>
-								<option value="trot">트로트</option>
-								<option value="folk/blues">포크/블루스</option>
-
-              </select>
-
-            </div>
-
-            <div class="form-floating mb-3">
-              <select class="form-select btn btn-custom" id="year-select" aria-label="Floating label select example">
-                <option value="no-trophy-year" selected>연도 무관</option>
-                <option value="80">1980년대</option>
-                <option value="90">1990년대</option>
-                <option value="00">2000년대</option>
-                <option value="10">2010년대</option>
-                <option value="20">2020년대</option>
-                <option value="new">최신곡</option>
-              </select>
-
-            </div>
-          </div>
+					<div class="radio-box">	
+						<input type="radio" name="radio" id="radio-1" checked /><label for="radio-1">장르 무관</label>
+						<input type="radio" name="radio" id="radio-2"  /><label for="radio-2">발라드</label>
+						<input type="radio" name="radio" id="radio-3"  /><label for="radio-3">댄스</label>
+						<input type="radio" name="radio" id="radio-4"  /><label for="radio-4">랩/힙합</label>
+						<input type="radio" name="radio" id="radio-5"  /><label for="radio-5">R&B/Soul</label>
+						<input type="radio" name="radio" id="radio-6"  /><label for="radio-6">인디음악</label>
+						<input type="radio" name="radio" id="radio-7"  /><label for="radio-7">록/메탈</label>
+						<input type="radio" name="radio" id="radio-8"  /><label for="radio-8">트로트</label>
+						<input type="radio" name="radio" id="radio-9"  /><label for="radio-9">포크/블루스</label>
+					</div>
         </div>
         <button type="button" id="make-list-button" class="btn btn-lg middle_button mx-auto d-block">Make</button>
       </div>
@@ -114,7 +86,7 @@
         <div class="circle">
 					
 				<div class="progress" id="progress"></div>
-					<audio id="audio" src="https://docs.google.com/uc?export=open&id=1Os_y9vbuije9XHp2jl5EaR7iu2It_cY7"></audio>
+					<audio id="audio" src="https://www.freesound.org/data/previews/338/338825_1648170-lq.mp3"></audio>
 						<button class="play-pause-button" onClick="togglePlay()">
 							<i>P</i>
 							<i>l</i>
