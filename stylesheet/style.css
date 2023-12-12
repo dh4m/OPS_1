@@ -385,7 +385,7 @@ a {
 
 .wave-one {
 	width: 900px;
-	height: 980px;
+	height: 950px;
 	position: absolute;
 	top: -65%;
 	left: -30%;
@@ -554,8 +554,6 @@ a {
 		opacity: 0;
 	}
 }
-
-.content {}
 
 .hidden-left {
 	animation: fade_out 1s ease-in-out;

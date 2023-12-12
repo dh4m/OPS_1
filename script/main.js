@@ -70,17 +70,17 @@ document.getElementById('make-list-button').addEventListener('click', function (
 });
 
 document.querySelectorAll('.play-pause-button').forEach(button => {
-	button.addEventListener('click', e => {
-			if(button.classList.contains('playing')) {
-					button.classList.remove('paused', 'playing');
-					button.classList.add('paused');
+	button.addEventListener('click', function() {
+			var audio = document.getElementById("audio");
+
+			if (this.classList.contains('playing')) {
+					this.classList.remove('playing');
+					this.classList.add('paused');
+					audio.pause();
 			} else {
-					if(button.classList.contains('paused')) {
-							button.classList.add('playing');
-					}
-			}
-			if(!button.classList.contains('paused')) {
-					button.classList.add('paused');
+					this.classList.remove('paused');
+					this.classList.add('playing');
+					audio.play();
 			}
 	});
 });
@@ -88,36 +88,26 @@ document.querySelectorAll('.play-pause-button').forEach(button => {
 var timer;
 var percent = 0;
 var audio = document.getElementById("audio");
+
 audio.addEventListener("playing", function(_event) {
-var duration = _event.target.duration;
-advance(duration, audio);
+	var duration = _event.target.duration;
+	advance(duration, audio);
 });
+
 audio.addEventListener("pause", function(_event) {
-clearTimeout(timer);
+	clearTimeout(timer);
 });
+
 var advance = function(duration, element) {
-var progress = document.getElementById("progress");
-increment = 10/duration
-percent = Math.min(increment * element.currentTime * 10, 100);
-progress.style.width = percent+'%'
-startTimer(duration, element);
-}
-var startTimer = function(duration, element){ 
-if(percent < 100) {
-	timer = setTimeout(function (){advance(duration, element)}, 100);
-}
+	var progress = document.getElementById("progress");
+	increment = 10/duration
+	percent = Math.min(increment * element.currentTime * 10, 100);
+	progress.style.width = percent+'%'
+	startTimer(duration, element);
 }
 
-function togglePlay (e) {
-	e = e || window.event;
-	var btn = e.target;
-	if (!audio.paused) {
-		btn.classList.remove('active');
-		audio.pause();
-		isPlaying = false;
-	} else {
-		btn.classList.add('active');
-		audio.play();
-		isPlaying = true;
+var startTimer = function(duration, element){ 
+	if(percent < 100) {
+		timer = setTimeout(function (){advance(duration, element)}, 100);
 	}
 }
