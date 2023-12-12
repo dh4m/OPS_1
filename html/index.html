@@ -21,7 +21,7 @@
 <body>
   <nav class="navbar bg-body-tertiary pt-0" style="height: 80px; background-color: #44a244;">
     <div class="container pt-0 mt-0">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" onClick="window.location.reload()" href="#">
         <div id="head_icon" class="d-inline-block align-items-center mt-0"></div>
         <span id="head_title" class="d-inline-block align-text-bottom">Random Play List</span>
       </a>
@@ -46,13 +46,13 @@
         </section>
         <ul>
           <li>
-            <a href="#"><i class="fa-solid fa-cat"></i> Reset</a>
+            <a onClick="window.location.reload()" href="#"><i class="fa-solid fa-cat"></i> Reset</a>
           </li>
           <li>
             <a href="#">My PlayList</a>
           </li>
           <li>
-            <a href="#">Melon top 100</a>
+            <a href="https://www.melon.com/chart/index.html" target='_blank'>Melon top 100</a>
           </li>
           <li>
             <a href="#">Issue</a>
@@ -63,7 +63,7 @@
       <div id="music-condition-container"
         class="content flex-grow-1 white-transparent-box rounded-2 p-2 ms-5 me-5 my-3">
         <h3 class="text-center mt-2 mb-5">What do you want?</h3>
-
+        <div id="thumbnail-container"></div>
         <div id="music-condition" class="mx-auto d-block text-center mb-5">
           <!--condition list radio, button, etc....-->
           <div class="form-group">
@@ -109,16 +109,16 @@
       <!--music play part-->
       <div class=" wrap content me-5 my-3" id="music-play-container" style="display: none;">
         <div class="circle">
-					
-				<div class="progress" id="progress"></div>
-					<audio id="audio" src="https://docs.google.com/uc?export=open&id=1Os_y9vbuije9XHp2jl5EaR7iu2It_cY7"></audio>
-						<button class="play-pause-button" onClick="togglePlay()">
-							<i>P</i>
-							<i>l</i>
-							<i>a</i>
-							<i>y</i>
-							<i>use</i>
-					</button>
+
+          <div class="progress" id="progress"></div>
+          <audio id="audio" src="https://docs.google.com/uc?export=open&id=1Os_y9vbuije9XHp2jl5EaR7iu2It_cY7"></audio>
+          <button class="play-pause-button" onClick="togglePlay()">
+            <i>P</i>
+            <i>l</i>
+            <i>a</i>
+            <i>y</i>
+            <i>use</i>
+          </button>
 
           <!-- wave -->
           <div class="wave-one"></div>
