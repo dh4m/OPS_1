@@ -79,7 +79,7 @@ async function crawling_melon(url) {
 			titles.forEach((title, i) => {
 				chart_list.push(`${title} - ${names[i]}`); // 출력 문자열 생성
 			})
-			chart_list = chart_list.slice(0, 15); // 15위까지만 표시
+			chart_list = chart_list.slice(0, 10); // 15위까지만 표시
 		})
 		.catch(error => console.error('Error:', error)); // 에러 발생 시
 	return ({
