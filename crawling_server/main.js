@@ -3,6 +3,8 @@ const cors = require('cors'); // 서버 CORS 설정 모듈
 const parser = require("node-html-parser");
 const axios = require('axios');
 
+require('dotenv').config();
+
 const app = express(); // 서버 객체 생성
 const port = 3000; // 프록시로 쓸 포트 지정
 
@@ -52,8 +54,7 @@ app.get('/newchart', (req, res) => { // /api 소스로 get요청이 들어온 �
 
 app.get('/youtube_get', (req, res) => {
 	const music_name = req.query.name;
-	const api_key = req.query.key;
-	getFirstVideoId(music_name + " lyrics", api_key)
+	getFirstVideoId(music_name + " lyrics", process.env.API_KEY)
 		.then(youtube_video_id => {
 			const youtube_embed_url = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtube_video_id}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
 			res.send(youtube_embed_url);
