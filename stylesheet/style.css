@@ -590,9 +590,9 @@ a {
 }
 
 .play-pause-button {
-	--play: #6D58FF;
+	--play: #8574f3;
 	--play-shadow: #{rgba(#6D58FF, .24)};
-	--pause: #2B3044;
+	--pause: rgba(7, 116, 167, 0.8);
 	--pause-shadow: #{rgba(#2B3044, .24)};
 	--color: #fff;
 	--icon: var(--color);
@@ -607,7 +607,7 @@ a {
 	cursor: pointer;
 	display: flex;
 	position: absolute;
-	top:80%;
+	top:83%;
 	left:43%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
