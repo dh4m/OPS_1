@@ -1,25 +1,17 @@
-
-const proxy_url = "http://localhost:3000/api"; // 프록시 서버 url
-
-const titles = []; // 음악 제목
-const names = []; // 가수
+let titles = []; // 음악 제목
+let names = []; // 가수
 
 let chart_list = ["차트 불러오는 중..."]; // 출력문 저장
 
 async function refresh_list() { // 차트 갱신
 	chart_list = ["차트 불러오는 중..."];
-	fetch(proxy_url) // 구축한 프록시 서버에 get요청 보냄
+	fetch("http://localhost:3000/topchart") // 구축한 프록시 서버에 get요청 보냄
 		.then(respone => respone.text()) // 응답 텍스트로 변환
 		.then((data) => {
-			const parser = new DOMParser(); // html 파싱 객체 생성
-			let root = parser.parseFromString(data, 'text/html'); // 파싱
+			const receive_data = JSON.parse(data);
+			titles = receive_data.title;
+			names = receive_data.name;
 
-			root.querySelectorAll(".rank01").forEach((item) => { // 노래 이름 저장
-				titles.push(item.querySelector("a").innerText);
-			});
-			root.querySelectorAll(".rank02").forEach((item) => { // 노래 가수 저장
-				names.push(item.querySelector("a").innerText);
-			});
 			chart_list = [];
 			titles.forEach((title, i) => {
 				chart_list.push(`${i + 1}. ${title} - ${names[i]}`); // 출력 문자열 생성
@@ -67,6 +59,31 @@ document.getElementById('make-list-button').addEventListener('click', function (
 		newDiv.style.display = 'flex';
 		oldDiv.style.display = 'none';
 	});
+
+	let genre = document.querySelector('input[name="genre-radio"]:checked').value;
+	fetch("http://localhost:3000/genre?genre=" + genre) // 구축한 프록시 서버에 get요청 보냄
+		.then(respone => respone.text()) // 응답 텍스트로 변환
+		.then(data => {
+			const receive_data = JSON.parse(data);
+			let show_list = receive_data.list;
+			show_list = show_list.slice(0, 20);
+		
+			for (i in show_list)
+			{
+				let div = document.createElement("div");
+				div.className= "p-1 rounded-2 ps-2 d-flex align-items-center my-1";
+				div.style.backgroundColor = "#D0D0D0"
+
+				let span = document.createElement("span");
+				span.classList.add("me-auto");
+				span.textContent = show_list[i];
+				div.appendChild(span);
+
+				let list_contain = document.querySelector("#music-list");
+				list_contain.appendChild(div);
+			}
+			
+		});
 });
 
 document.querySelectorAll('.play-pause-button').forEach(button => {
