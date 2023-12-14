@@ -33,6 +33,11 @@
 	width: 90%;
 	height: 70%;
 	margin-left: 100px;
+	border: 2px solid #aceaee;
+}
+
+.music-list-title {
+  color: rgb(169, 215, 238); /* 원하는 색상으로 변경 */
 }
 
 #music-list {
