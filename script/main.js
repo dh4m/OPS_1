@@ -72,7 +72,7 @@ document.getElementById('make-list-button').addEventListener('click', function (
 			{
 				let div = document.createElement("div");
 				div.className= "p-1 rounded-2 ps-2 d-flex align-items-center my-1";
-				div.style.backgroundColor = "#D0D0D0"
+				div.style.backgroundColor = "#CC66CC"
 
 				let span = document.createElement("span");
 				span.classList.add("me-auto");
