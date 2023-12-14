@@ -56,7 +56,7 @@ app.get('/youtube_get', (req, res) => {
 	const music_name = req.query.name;
 	getFirstVideoId(music_name + " lyrics", process.env.API_KEY)
 		.then(youtube_video_id => {
-			const youtube_embed_url = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtube_video_id}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+			const youtube_embed_url = `<iframe width="300" height="200" src="https://www.youtube.com/embed/${youtube_video_id}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
 			res.send(youtube_embed_url);
 		})
 });
