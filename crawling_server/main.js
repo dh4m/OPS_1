@@ -38,7 +38,7 @@ app.get('/genre', (req, res) => { // genre 소스로 get요청이 들어온 경�
 	else if (genre === "fork")
 		crawl_data = crawling_melon("https://www.melon.com/genre/song_list.htm?gnrCode=GN0800&steadyYn=Y"); // 크롤링 실행
 	else
-		crawl_data = crawling_melon("https://www.melon.com/chart/index.htm"); // 크롤링 실행
+		crawl_data = crawling_melon("https://www.melon.com/new/index.htm"); // 크롤링 실행
 	crawl_data.then(d => res.send(d)); // 해당 결과 전송
 });
 
@@ -80,7 +80,7 @@ async function crawling_melon(url) {
 			titles.forEach((title, i) => {
 				chart_list.push(`${title} - ${names[i]}`); // 출력 문자열 생성
 			})
-			chart_list = chart_list.slice(0, 10); // 15위까지만 표시
+			chart_list = chart_list.slice(0, 30); // 30위까지만 표시
 		})
 		.catch(error => console.error('Error:', error)); // 에러 발생 시
 	return ({
