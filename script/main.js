@@ -81,7 +81,12 @@ document.getElementById('make-list-button').addEventListener('click', function (
 				let list_contain = document.querySelector("#music-list");
 				list_contain.appendChild(div);
 			}
-			
+			fetch("http://localhost:3000/youtube_get?name=" + receive_data.title[0])
+				.then(respone => respone.text())
+				.then(data => {
+					let youtube_contain = document.querySelector("#youtube-contain");
+					youtube_contain.innerHTML = data;
+				});
 		});
 });
 
