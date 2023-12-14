@@ -9,7 +9,10 @@
 }
 
 #youtube-contain {
-	z-index: 10;
+	z-index: 6;
+	position: relative;
+	padding-top: 20%;
+	padding-left: 25%;
 }
 
 #head_icon {
