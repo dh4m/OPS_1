@@ -588,7 +588,7 @@ a {
 }
 
 .play-pause-button {
-	--play: #8574f3;
+	--play: #388edf;
 	--play-shadow: #{rgba(#6D58FF, .24)};
 	--pause: rgba(7, 116, 167, 0.8);
 	--pause-shadow: #{rgba(#2B3044, .24)};
